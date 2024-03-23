@@ -1,0 +1,22 @@
+.Header{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 800px;
+    padding: 20px;
+}
+
+.fix-text{
+    position: absolute;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 100px;
+}

@@ -1,0 +1,10 @@
+:root{
+  --orange: #EB6440;
+  --black-low: #1E1E1E;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
