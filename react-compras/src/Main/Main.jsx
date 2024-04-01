@@ -9,8 +9,8 @@ const luana = {
     ativa: true,
 };
 
-const mario = {
-    cliente: 'Mario',
+const pedro = {
+    cliente: 'Pedro',
     idade: 31,
     compras: [
         { nome: 'Notebook', preco: 'R$ 2500' },
@@ -30,17 +30,18 @@ const verificaSituacao = (dados) => {
 }
 
 const Main = () => {
-    const dados = luana;
-    const sum = dados.compras.reduce(
-        (currentValue, accumulator) => accumulator+currentValue.preco, 0
-    )
+    const dados = pedro;
+    const total = dados.compras.map((comprar) => {
+        return Number(comprar.preco.replace('R$ ',""))
+    }).reduce((a, b) => a + b, 0)
+
     return (
         <main>
             <p>Nome: {dados.cliente}</p>
             <p>Idade: {dados.idade}</p>
-            <p>Situação: {verificaSituacao(dados.ativa)}</p>
-            <p>Idade: {dados.idade}</p>
-            <p>Gastos: {sum}</p>
+            <p>Situação: <span style={dados.ativa == true ? {color: 'green'}: {color: 'red'}}>{verificaSituacao(dados.ativa)}</span></p>
+            <p>Gastos: {total}</p>
+            <p>{total > 10000 ? "Você está gastando muito" : "Está no caminho certo"}</p>
         </main>
     )
 }
