@@ -1,8 +1,23 @@
+@font-face {
+    font-family: Inter;
+    src: url(assets/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
 :root{
     --Light_red: hsl(0, 100%, 67%);
     --Orangey_yellow: hsl(39, 100%, 56%);
     --Green_teal: hsl(166, 100%, 37%);
     --Cobalt_blue: hsl(234, 85%, 45%);
+    --Light_red-gradient: hsla(0, 100%, 67%, 10%);
+    --Orangey_yellow-gradient: hsla(39, 100%, 56%, 10%);
+    --Green_teal-gradient: hsla(166, 100%, 37%, 10%);
+    --Cobalt_blue-gradient: hsla(234, 85%, 45%, 10%);
+}
+*{
+    font-family: Inter;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -15,14 +30,128 @@ body {
     align-items: center;
 }
 
-.main {
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0px 10px 10px hsla(224, 30%, 27%, 40%);
+    border-radius: 25px;
+    width: 750px;
+    height: 500px;
+    background: var(--Dark_Grey);
+}
+
+.datas{
+    align-self: center;
+    width: 85%;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
+    gap: 12px;
+}
+
+.nome-image{
+    display: flex;
+}
+
+.button-box{
+    margin-top: 20px;
+    width: 100%;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    height: 50px;
+    border: none;
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 25px;
+    width: 85%;
+    color: white;
+}
+
+.button:hover{
+    cursor: pointer;
+    height: 50px;
+    border: none;
+    background-image: linear-gradient(0.5turn, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.data{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+}
+
+.Reaction{
+    background-color: var(--Light_red-gradient);
+    color: var(--Light_red);
+}
+.Memory{
+    background-color: var(--Orangey_yellow-gradient);
+    color: var(--Orangey_yellow);
+}
+.Verbal{
+    background-color: var(--Green_teal-gradient);
+    color: var(--Green_teal);
+}
+.Visual{
+    background-color: var(--Cobalt_blue-gradient);
+    color: var(--Cobalt_blue);
+}
+
+.mediaCircle{
+    display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
-    color: hsl(0, 0%, 100%);
-    width: 320px;
-    height: 75vh;
-    background: var(--Dark_Grey);
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-image: linear-gradient(0.5turn, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+.of{
+    font-weight: 600;
+    color: hsla(241, 57%, 20%, 0.439);
+}
+
+.mediaCircle > h1{
+    font-size: 80px;
+}
+
+.mediaCircle > p{
+    font-size: 18px;
+}
+
+.rest-of-text{
+    width: 80%;
+    text-align: center;
+}
+
+.summary{
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    background-color: white;
+}
+
+.media{
+    color: white;
+    gap: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    width: 50%;
+    background-image: linear-gradient(0.5turn, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }

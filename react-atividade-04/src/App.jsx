@@ -1,4 +1,7 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import './style.css'
 import data from './assets/data.json';
 import memory from './assets/assets/images/icon-memory.svg';
 import reaction from './assets/assets/images/icon-reaction.svg';
@@ -17,9 +20,13 @@ const SummaryItems = ({ data, categoria }) => {
     const iconSrc = categoryIcons[categoria];
     return (
         <>
-            <h2>{dados.category}</h2>
-            <p>Score: {dados.score}</p>
-            <img src={iconSrc} alt={dados.category} />
+            <span className={`${dados.category} data`}>
+                <div className='nome-image'>
+                    <img src={iconSrc} alt={dados.category} />
+                    <p>{dados.category}</p>
+                </div>
+                <p className='score'>{dados.score}/100</p>
+            </span>
         </>
     );
 };
@@ -39,11 +46,27 @@ const resultadoMedia = media({ data: data });
 const App = () => {
     return (
         <main>
-            <SummaryItems data={data} categoria='Reaction' />
-            <SummaryItems data={data} categoria='Memory' />
-            <SummaryItems data={data} categoria='Verbal' />
-            <SummaryItems data={data} categoria='Visual' />
-            <p>Media: {resultadoMedia}</p>
+            <span className='media'>
+                <h3>Your Result</h3>
+                <span className='mediaCircle'>
+                    <h1>{resultadoMedia}</h1>
+                    <p className='of'>of 100</p>
+                </span>
+                <div className='rest-of-text'>
+                    <h2>Great</h2>
+                    <p>You scored higher than 65% of the people who have taken these tests.</p>
+                </div>
+            </span>
+            <span className='summary'>
+                <div className='datas'>
+                    <h2>Summary</h2>
+                    <SummaryItems data={data} categoria='Reaction'/>
+                    <SummaryItems data={data} categoria='Memory' />
+                    <SummaryItems data={data} categoria='Verbal' />
+                    <SummaryItems data={data} categoria='Visual' />
+                </div>
+                <div className='button-box'><input type="button" value="Continue" className='button'/></div>
+            </span>
         </main>
     );
 };
