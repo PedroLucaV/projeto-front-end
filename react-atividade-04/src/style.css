@@ -3,7 +3,7 @@
     src: url(assets/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
 }
 
-:root{
+:root {
     --Light_red: hsl(0, 100%, 67%);
     --Orangey_yellow: hsl(39, 100%, 56%);
     --Green_teal: hsl(166, 100%, 37%);
@@ -13,7 +13,8 @@
     --Green_teal-gradient: hsla(166, 100%, 37%, 10%);
     --Cobalt_blue-gradient: hsla(234, 85%, 45%, 10%);
 }
-*{
+
+* {
     font-family: Inter;
     padding: 0;
     margin: 0;
@@ -41,7 +42,7 @@ main {
     background: var(--Dark_Grey);
 }
 
-.datas{
+.datas {
     align-self: center;
     width: 85%;
     justify-content: space-between;
@@ -50,11 +51,11 @@ main {
     gap: 12px;
 }
 
-.nome-image{
+.nome-image {
     display: flex;
 }
 
-.button-box{
+.button-box {
     margin-top: 20px;
     width: 100%;
     flex-grow: 0;
@@ -63,7 +64,7 @@ main {
     align-items: center;
 }
 
-.button{
+.button {
     height: 50px;
     border: none;
     background-color: hsl(224, 30%, 27%);
@@ -72,14 +73,14 @@ main {
     color: white;
 }
 
-.button:hover{
+.button:hover {
     cursor: pointer;
     height: 50px;
     border: none;
     background-image: linear-gradient(0.5turn, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
-.data{
+.data {
     flex-direction: row;
     justify-content: space-between;
     flex-grow: 1;
@@ -89,24 +90,27 @@ main {
     display: flex;
 }
 
-.Reaction{
+.Reaction {
     background-color: var(--Light_red-gradient);
     color: var(--Light_red);
 }
-.Memory{
+
+.Memory {
     background-color: var(--Orangey_yellow-gradient);
     color: var(--Orangey_yellow);
 }
-.Verbal{
+
+.Verbal {
     background-color: var(--Green_teal-gradient);
     color: var(--Green_teal);
 }
-.Visual{
+
+.Visual {
     background-color: var(--Cobalt_blue-gradient);
     color: var(--Cobalt_blue);
 }
 
-.mediaCircle{
+.mediaCircle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,25 +121,25 @@ main {
     background-image: linear-gradient(0.5turn, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
 }
 
-.of{
+.of {
     font-weight: 600;
     color: hsla(241, 57%, 20%, 0.439);
 }
 
-.mediaCircle > h1{
+.mediaCircle>h1 {
     font-size: 80px;
 }
 
-.mediaCircle > p{
+.mediaCircle>p {
     font-size: 18px;
 }
 
-.rest-of-text{
+.rest-of-text {
     width: 80%;
     text-align: center;
 }
 
-.summary{
+.summary {
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -144,7 +148,7 @@ main {
     background-color: white;
 }
 
-.media{
+.media {
     color: white;
     gap: 70px;
     display: flex;
@@ -154,4 +158,16 @@ main {
     border-radius: 25px;
     width: 50%;
     background-image: linear-gradient(0.5turn, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media (max-width: 375px) {
+    main {
+        width: 320px;
+        height: 460px;
+    }
+
+    .mediaCircle {
+        width: 150px;
+        height: 150px;
+    }
 }
