@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sedan{
+    background-color: hsl(31, 77%, 52%);
+}
+.Suvs{
+    background-color: hsl(184, 100%, 22%);
+}
+.Luxury{
+    background-color: hsl(179, 100%, 13%);
+}
+
+.Sedan>button{
+    color: hsl(31, 77%, 52%);
+}
+.Suvs>button{
+    color: hsl(184, 100%, 22%);
+}
+.Luxury>button{
+    color: hsl(179, 100%, 13%);
+}
+
+.containerB{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 10px;
+    color: white;
+    width: 300px;
+    gap: 20px;
+    justify-content: flex-end;
+    padding-bottom: 45px;
+}
+.containerB > button{
+    margin-top: auto;
+    border: none;
+    width: 75%;
+    height: 40px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.containerB>p{
+    font-family: Lexend Deca;
+    font-weight: 400;
+}
+
+.containerB>h1{
+    font-family: Big Shoulders Display;
+    font-weight: 700;
+}
+
+.containerB > img{
+    width: 60px;
+}

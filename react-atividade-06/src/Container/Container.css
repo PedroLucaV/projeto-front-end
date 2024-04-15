@@ -1,0 +1,6 @@
+.container{
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+}
